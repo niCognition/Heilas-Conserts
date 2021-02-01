@@ -2,6 +2,7 @@ import Head from 'next/head'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import ReactButtons from '../components/reactbootstrapelement'
+import TopBanner from '../components/topbannercomponent'
 import { Button } from 'react-bootstrap'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <TopBanner ></TopBanner>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
