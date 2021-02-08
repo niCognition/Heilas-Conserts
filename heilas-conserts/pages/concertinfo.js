@@ -1,6 +1,11 @@
-
-
+import React from 'react'
+import TopBanner from '../components/topbannercomponent.js'
 
 export default function ConcertInfo() {
-    return <h1>This is the concert info page</h1>
+    return (
+        <div>
+            <TopBanner />
+            <h1>This is the concertInfo page</h1>
+        </div>
+    )
 }

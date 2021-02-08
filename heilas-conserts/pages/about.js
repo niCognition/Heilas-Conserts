@@ -1,4 +1,11 @@
+import React from 'react'
+import TopBanner from '../components/topbannercomponent.js'
 
 export default function About() {
-    return <h1>This will be the About page</h1>
+    return (
+        <div>
+            <TopBanner />
+            <h1>This is the about page</h1>
+        </div>
+    )
 }
