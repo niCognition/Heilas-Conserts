@@ -1,0 +1,34 @@
+.rowOrange {
+    background-color: #F95700;
+    padding-bottom: 0px;
+}
+
+.rowGrey {
+    background-color: #C4C4C4;
+    border-style: solid;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.titleCol {
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+
+.menuCol {
+    align-items: center;
+    text-align: center; /* Denna är bara här för att centrera texten tillfälligt */
+}
+
+.a {
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.a:hover {
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    text-decoration: none;
+}
