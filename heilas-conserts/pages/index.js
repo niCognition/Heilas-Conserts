@@ -1,29 +1,22 @@
 import Head from 'next/head'
+
 import React from 'react'
+import TopBanner from '../components/topbannercomponent.js'
 import styles from '../styles/Home.module.css'
 import ReactButtons from '../components/reactbootstrapelement'
-import TopBanner from '../components/topbannercomponent'
-import { Button } from 'react-bootstrap'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Heilas Concerts</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <TopBanner />
+
+      {/* Next.js boilerplate code with some modifications */}
       <main className={styles.main}>
-        <TopBanner ></TopBanner>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
         <div className={styles.grid}>
           <h3>Heidi kolla reactbootstrapelement.js i components foldern för att se hur enkelt det är med React-bootstrap</h3>
           <ReactButtons></ReactButtons>
