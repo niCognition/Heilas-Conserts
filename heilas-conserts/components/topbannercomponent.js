@@ -8,7 +8,7 @@ const TopBanner = () => {
         <Container fluid>
             <Row className={styles.rowOrange}>
                 <Col xs={12} md={6} className={styles.titleCol}>
-                    <b><a className={styles.a} href="/">HEILAS CONCERTS*</a></b>
+                    <a className={styles.a} href="/">HEILAS CONCERTS*</a>
                 </Col>
                 <Col xs={0} md={6} className={styles.titleCol} />
             </Row>
