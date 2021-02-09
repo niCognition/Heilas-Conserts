@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import React from 'react'
 import TopBanner from '../components/topbannercomponent.js'
+import ConcertCard from '../components/singleconcertcomponent.js'
 import styles from '../styles/Home.module.css'
 import ReactButtons from '../components/reactbootstrapelement'
 
@@ -18,6 +19,7 @@ export default function Home() {
       {/* Next.js boilerplate code with some modifications */}
       <main className={styles.main}>
         <div className={styles.grid}>
+          <ConcertCard />
           <h3>Heidi kolla reactbootstrapelement.js i components foldern för att se hur enkelt det är med React-bootstrap</h3>
           <ReactButtons></ReactButtons>
           <a href="https://nextjs.org/docs" className={styles.card}>
