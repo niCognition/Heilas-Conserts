@@ -1,5 +1,6 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
+import styles from './inputcomponent.module.css';
 
 
 const InputForm = () => {
@@ -7,7 +8,7 @@ const InputForm = () => {
 
     return (
 
-        <Form>
+        <Form className={styles.Form}>
             <Form.Group>
                 <Form.Label>Band Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter Band Name"/>
@@ -46,6 +47,10 @@ const InputForm = () => {
                     name="file"
                     label="File"
                     />
+            </Form.Group>
+            <Form.Group>
+                <Form.Label>SpotifyID</Form.Label>
+                <Form.Control type="text" placeholder="Enter SpotifyID"/>
             </Form.Group>
             <Button type="submit" variant="secondary">Register Concert</Button>
         </Form>
