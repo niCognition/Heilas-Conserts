@@ -6,10 +6,10 @@ const ConcertCard = () => {
         <Card border="dark" style={{ width: '100%'}}>
             <Container fluid>
                 <Row>
-                    <Col md={6}>
+                    <Col xs md={6}>
                         <h1>BAND IMAGE</h1>
                     </Col>
-                    <Col md={6}>
+                    <Col xs md={6}>
                         <h1>BAND NAME</h1>
                         <h5>STAGE NAME</h5>
                     </Col>
