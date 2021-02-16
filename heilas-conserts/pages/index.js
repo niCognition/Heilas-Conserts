@@ -5,23 +5,57 @@ import TopBanner from '../components/topbannercomponent.js'
 import ConcertCard from '../components/singleconcertcomponent.js'
 import styles from '../styles/Home.module.css'
 import ReactButtons from '../components/reactbootstrapelement'
+import axios from 'axios';
+import fetch from "node-fetch"
 
 
 
-export default function Home() {
+
+/* export async function getStaticProps() {
+  const res = await fetch('http://localhost:8080/concert')
+  const data = await res.json()
+
+  console.log(data);
+  
+    return {
+      props: { data },
+  }
+}
+*/
+
+
+
+ function Home({concerts, error}) {
+
+  if (error) {
+    return <div>An error occured: {error.message}</div>;
+  }
+
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Heilas Concerts</title>
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
 
       <TopBanner />
 
+
+
+
       {/* Next.js boilerplate code with some modifications */}
       <main className={styles.main}>
         <div className={styles.grid}>
-          <ConcertCard />
+
+          {concerts.map(concert => (
+
+              <ConcertCard img={concert.bandImageUrl} name={concert.bandName} stage={concert.stage} date={concert.dateTime} />
+
+          ))}
+
+         
           <h3>Heidi kolla reactbootstrapelement.js i components foldern för att se hur enkelt det är med React-bootstrap</h3>
           <ReactButtons></ReactButtons>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -67,3 +101,19 @@ export default function Home() {
     </div>
   )
 }
+
+
+Home.getInitialProps = async ctx => {
+  try {
+    const res = await axios.get('http://localhost:8080/concerts');
+    const concerts = res.data;
+    return { concerts };
+
+  } catch (error) {
+    return { error };
+  }
+};
+
+
+
+export default Home;
