@@ -22,7 +22,7 @@ const TopBanner = () => {
                                 <Nav.Link href="/">Concerts</Nav.Link>
                                 <Nav.Link href="/FAQ">FAQ</Nav.Link>
                                 <Nav.Link href="/about">About Heilas</Nav.Link>
-                                <Nav.Link href="/login">Login</Nav.Link>
+                                <Nav.Link href="/login">Register Concert</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
