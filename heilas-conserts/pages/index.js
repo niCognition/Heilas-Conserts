@@ -25,7 +25,7 @@ import fetch from "node-fetch"
 
 
 
- function Home({concerts, error}) {
+function Home({ concerts, error }) {
 
   if (error) {
     return <div>An error occured: {error.message}</div>;
@@ -50,41 +50,9 @@ import fetch from "node-fetch"
         <div className={styles.grid}>
 
           {concerts.map(concert => (
-
-              <ConcertCard img={concert.bandImageUrl} name={concert.bandName} stage={concert.stage} date={concert.dateTime} />
-
+            <ConcertCard img={concert.bandImageUrl} name={concert.bandName} stage={concert.stage} date={concert.dateTime} />
           ))}
-
-         
-          <h3>Heidi kolla reactbootstrapelement.js i components foldern för att se hur enkelt det är med React-bootstrap</h3>
-          <ReactButtons></ReactButtons>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          
         </div>
       </main>
 
