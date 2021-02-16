@@ -10,7 +10,7 @@ import styles from '../components/singleconcertcomponent.module.css'
 const ConcertCard = (props) => {
 
     return (    
-        <Card border="dark" style={{ width: '100%'}}>
+        <Card className={styles.Card} border="dark" style={{ width: '100%'}}>
             <Container fluid>
                 <Row>
                     <Col className={styles.Col} xs={10} md={4}>

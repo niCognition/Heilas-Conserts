@@ -42,15 +42,12 @@ function Home({ concerts, error }) {
 
       <TopBanner />
 
-
-
-
       {/* Next.js boilerplate code with some modifications */}
       <main className={styles.main}>
         <div className={styles.grid}>
 
           {concerts.map(concert => (
-            <ConcertCard img={concert.bandImageUrl} name={concert.bandName} stage={concert.stage} date={concert.dateTime} />
+            <ConcertCard className={styles.concerts} img={concert.bandImageUrl} name={concert.bandName} stage={concert.stage} date={concert.dateTime} />
           ))}
           
         </div>
