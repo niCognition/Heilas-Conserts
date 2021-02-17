@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Form, Button, Col, Row } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 import styles from './inputcomponent.module.css';
 
 

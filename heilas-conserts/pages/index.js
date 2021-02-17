@@ -1,15 +1,11 @@
-import Head from 'next/head'
+import Head from 'next/head';
 
-import React from 'react'
-import TopBanner from '../components/topbannercomponent.js'
-import ConcertCard from '../components/singleconcertcomponent.js'
-import styles from '../styles/Home.module.css'
-import ReactButtons from '../components/reactbootstrapelement'
+import React from 'react';
+import TopBanner from '../components/topbannercomponent.js';
+import ConcertCard from '../components/singleconcertcomponent.js';
+import styles from '../styles/Home.module.css';
 import axios from 'axios';
-import fetch from "node-fetch"
-
-
-
+import fetch from "node-fetch";
 
 /* export async function getStaticProps() {
   const res = await fetch('http://localhost:8080/concert')
@@ -23,21 +19,17 @@ import fetch from "node-fetch"
 }
 */
 
-
-
 function Home({ concerts, error }) {
 
   if (error) {
     return <div>An error occured: {error.message}</div>;
   }
 
-
   return (
     <div className={styles.container}>
       <Head>
         <title>Heilas Concerts</title>
         <link rel="icon" href="/favicon.ico" />
-
       </Head>
 
       <TopBanner />
@@ -47,9 +39,12 @@ function Home({ concerts, error }) {
         <div className={styles.grid}>
 
           {concerts.map(concert => (
-            <ConcertCard className={styles.concerts} img={concert.bandImageUrl} name={concert.bandName} stage={concert.stage} date={concert.dateTime} />
+            <ConcertCard
+              key={concert.id} img={concert.bandImageUrl}
+              name={concert.bandName} stage={concert.stage}
+              date={concert.dateTime} id={concert.id} />
           ))}
-          
+
         </div>
       </main>
 
