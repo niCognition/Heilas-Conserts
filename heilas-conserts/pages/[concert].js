@@ -44,7 +44,17 @@ function Concert({ concerts, error }) {
                     info={concert[0].bandInfo}
                     id={concert[0].spotifyId}
                 />
+                <iframe 
+                src={`https://open.spotify.com/embed/artist/${concert[0].spotifyId}`} 
+                width="100%" 
+                height="380" 
+                frameborder="0" 
+                allowtransparency="true" 
+                allow="encrypted-media"></iframe>
             </Container>
+            <footer className={styles.footer}>
+                <p>Made by Heidi and Niclas Newton 2021</p>
+            </footer>
 
         </div>
     )

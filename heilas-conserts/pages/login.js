@@ -18,7 +18,7 @@ export default function Login() {
             <TopBanner />
             <Container>
                 <Row className="justify-content-center">
-                    <Image src="\vishnu-r-nair-m1WZS5ye404-unsplash.jpg" />
+                    <Image src="\vishnu-r-nair-m1WZS5ye404-unsplash.jpg" fluid/>
                     <h1>Register Concert</h1>
                     <Col lg="10">
                         <InputForm />
