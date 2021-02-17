@@ -2,7 +2,6 @@
 .toprow {
 
    display: flex;
-   padding: 40px;
 
 
 }
@@ -11,9 +10,8 @@
 .image {
 
    display: flex;
-   align-items: right;
+   /*align-items: center;*/
    flex-direction: column;
-   
 
 }
 
@@ -34,13 +32,20 @@
 
 .title {
 
-    padding: 20px;
-    
+    margin: 0;
+    line-height: 1.15;
+    font-size: 4rem;
+    text-align: center;
 
 }
 
 .concertinfo {
 
-    padding-left: 40px;
+    border: 2px solid;
+    border-color: black;
+    margin: 0;
+    line-height: 1.15;
+    font-size: 1rem;
+    text-align: left;
 
 }

@@ -5,19 +5,6 @@ import TopBanner from '../components/topbannercomponent.js';
 import ConcertCard from '../components/singleconcertcomponent.js';
 import styles from '../styles/Home.module.css';
 import axios from 'axios';
-import fetch from "node-fetch";
-
-/* export async function getStaticProps() {
-  const res = await fetch('http://localhost:8080/concert')
-  const data = await res.json()
-
-  console.log(data);
-  
-    return {
-      props: { data },
-  }
-}
-*/
 
 function Home({ concerts, error }) {
 
