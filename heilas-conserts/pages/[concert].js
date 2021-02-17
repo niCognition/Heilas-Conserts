@@ -6,6 +6,7 @@ import TopBanner from '../components/topbannercomponent.js';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import ConcertInfo from '../components/concertinfoboxcomponent.js'
 
 
 function Concert({ concerts, error }) {
@@ -51,7 +52,36 @@ function Concert({ concerts, error }) {
 
             <TopBanner />
 
-            <Container>
+            <ConcertInfo 
+            
+            img={concert[0].bandImageUrl}
+            date={concert[0].dateTime}
+            stage={concert[0].stage}
+            age={concert[0].ageLimit}
+            name={concert[0].bandName}
+            info={concert[0].bandInfo}
+            
+            />
+
+       
+        </div>
+    )
+}
+
+Concert.getInitialProps = async ctx => {
+    try {
+        const res = await axios.get('http://localhost:8080/concerts');
+        const concerts = res.data;
+        return { concerts };
+
+    } catch (error) {
+        return { error };
+    }
+}
+
+export default Concert;
+
+  /*   <Container>
                 <Row >
                     <Card bg="light">
                         <Col>
@@ -98,20 +128,4 @@ function Concert({ concerts, error }) {
                     <Col>
                     </Col>
                 </Row>
-            </Container>
-        </div>
-    )
-}
-
-Concert.getInitialProps = async ctx => {
-    try {
-        const res = await axios.get('http://localhost:8080/concerts');
-        const concerts = res.data;
-        return { concerts };
-
-    } catch (error) {
-        return { error };
-    }
-}
-
-export default Concert;
+            </Container> */
