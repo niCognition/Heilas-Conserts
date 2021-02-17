@@ -1,5 +1,4 @@
 import Head from 'next/head';
-
 import React from 'react';
 import TopBanner from '../components/topbannercomponent.js';
 import ConcertCard from '../components/singleconcertcomponent.js';
@@ -26,6 +25,9 @@ function Home({ concerts, error }) {
         <div className={styles.grid}>
 
           {concerts.map(concert => (
+
+            
+
             <ConcertCard
               key={concert.id} img={concert.bandImageUrl}
               name={concert.bandName} stage={concert.stage}
