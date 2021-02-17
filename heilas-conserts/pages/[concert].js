@@ -60,6 +60,7 @@ function Concert({ concerts, error }) {
             age={concert[0].ageLimit}
             name={concert[0].bandName}
             info={concert[0].bandInfo}
+            id={concert[0].spotifyId}
             
             />
 

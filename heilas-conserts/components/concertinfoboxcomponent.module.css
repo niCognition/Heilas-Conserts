@@ -1,7 +1,19 @@
 
-.space {
+.toprow {
 
-    padding: 10px;
+   display: flex;
+   padding: 40px;
+
+
+}
+
+
+.image {
+
+   display: flex;
+   align-items: right;
+   flex-direction: column;
+   
 
 }
 
@@ -9,8 +21,26 @@
 
     
     border: 2px solid;
-    padding: 10px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    background-color: #C4C4C4;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 300px;
     
+
+}
+
+.title {
+
+    padding: 20px;
+    
+
+}
+
+.concertinfo {
+
+    padding-left: 40px;
 
 }
