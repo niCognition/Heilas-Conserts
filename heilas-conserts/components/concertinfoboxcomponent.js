@@ -1,8 +1,6 @@
 import React from 'react'
-import { Container, Row, Col, Image, Button } from 'react-bootstrap'
+import { Container, Row, Col, Image } from 'react-bootstrap'
 import styles from '../components/concertinfoboxcomponent.module.css'
-
-
 
 const ConcertInfo = (props) => {
 
@@ -37,7 +35,6 @@ const ConcertInfo = (props) => {
             </Row>
         </Container>
     )
-
 }
 
 export default ConcertInfo;

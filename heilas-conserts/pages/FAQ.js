@@ -1,6 +1,6 @@
 import Head from 'next/head'
-
 import React from 'react'
+
 import { Container, Row, Col } from 'react-bootstrap'
 import TopBanner from '../components/topbannercomponent.js'
 import styles from '../styles/Home.module.css';
@@ -12,14 +12,12 @@ export default function FAQ() {
                 <title>Heilas Concerts</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
             <TopBanner />
-
             <Container className={styles.grid}>
                 <Row className="justify-content-center">
                     <Col className={styles.title}>
                         <h1>FAQ</h1>
-                        <br/>
+                        <br />
                         <h5>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+
 import { Form, Button } from 'react-bootstrap';
 import styles from './inputcomponent.module.css';
 
@@ -7,9 +8,7 @@ import styles from './inputcomponent.module.css';
 const InputForm = () => {
 
     const handleSubmit = async (event) => {
-
         event.preventDefault()
-
         await axios
             .post('http://localhost:8080/concerts', {
                 'bandName': event.target.bandName.value,
@@ -26,18 +25,15 @@ const InputForm = () => {
             .catch(function (err) {
                 console.log(err);
             });
-
         event.target.bandName.value = "";
         event.target.date.value = "";
         event.target.time.value = "";
         event.target.bandInfo.value = "";
         event.target.imageUrl.value = "";
         event.target.spotifyId.value = "";
-
     }
 
     return (
-
         <Form onSubmit={handleSubmit} className={styles.Form}>
             <Form.Group controlId="bandName">
                 <Form.Label>Band Name</Form.Label>

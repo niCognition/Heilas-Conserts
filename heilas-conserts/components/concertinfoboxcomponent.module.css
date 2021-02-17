@@ -1,8 +1,5 @@
-
 .toprow {
-
    display: flex;
-
 }
 
 .inforow {
@@ -12,16 +9,11 @@
 
 
 .image {
-
    display: flex;
-   /*align-items: center;*/
    flex-direction: column;
-
 }
 
-.infobox {
-
-    
+.infobox {   
     border: 2px solid;
     display: flex;
     flex-direction: column;
@@ -30,26 +22,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
     height: 300px;
-    
-
 }
 
 .title {
-
     margin: 0;
     line-height: 1.15;
     font-size: 4rem;
     text-align: center;
-
 }
 
 .concertinfo {
-
     border: 2px solid;
     border-color: black;
     margin: 0;
     line-height: 1.15;
     font-size: 1rem;
     text-align: left;
-
 }
