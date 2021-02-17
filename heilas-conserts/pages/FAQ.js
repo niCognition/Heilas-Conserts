@@ -20,7 +20,7 @@ export default function FAQ() {
                     <Col className={styles.title}>
                         <h1>FAQ</h1>
                         <br/>
-                        <h2>
+                        <h5>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam,
@@ -28,7 +28,7 @@ export default function FAQ() {
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             Excepteur sint occaecat cupidatat non proident,
                             sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </h2>
+                        </h5>
                     </Col>
                 </Row>
             </Container>

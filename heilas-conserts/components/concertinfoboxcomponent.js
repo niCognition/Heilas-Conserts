@@ -17,7 +17,7 @@ const ConcertInfo = (props) => {
                 </Col>
                 <Col className={styles.infobox} xs={12} md={4}>
                     <h5><b>Date:</b> {props.date}</h5>
-                    <h5><b>Time:</b> {props.date}</h5>
+                    <h5><b>Time:</b> {props.time}</h5>
                     <h5><b>Stage:</b> {props.stage}</h5>
                     <h5><b>Age Limit:</b> {props.age}</h5>
                     <h5><b>Price:</b> {props.price}</h5>

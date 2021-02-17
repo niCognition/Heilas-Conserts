@@ -20,6 +20,7 @@ const ConcertCard = (props) => {
                             <h1>{props.name}</h1>
                             <h6><b>{props.stage}</b></h6>
                             <h2>{props.date}</h2>
+                            <h6>{props.time}</h6>
                         </Col>
                     </Row>
                 </Container>

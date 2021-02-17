@@ -20,13 +20,13 @@ export default function About() {
                     <Col className={styles.title}>
                         <h1>About Heilas</h1>
                         <br/>
-                        <h2>
+                        <h5>
                             This is supposed to be a site where you can make concert bookings,
                             due to lack of time for this project it's not possible to make bookings.
                             But it's possible to add concerts and view the concerts.
-                        </h2>
+                        </h5>
                         <br/>
-                        <h3>
+                        <h6>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             Ut enim ad minim veniam,
@@ -34,7 +34,17 @@ export default function About() {
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                             Excepteur sint occaecat cupidatat non proident,
                             sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </h3>
+                        </h6>
+                        <br/>
+                        <h6>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </h6>
                     </Col>
                 </Row>
             </Container>

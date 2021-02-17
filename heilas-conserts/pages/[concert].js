@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import moment from 'moment';
 
 import React from 'react';
 import { Container, Row, Col, Image, Card } from 'react-bootstrap';
@@ -37,7 +38,8 @@ function Concert({ concerts, error }) {
             <Container className={styles.grid}>
                 <ConcertInfo
                     img={concert[0].bandImageUrl}
-                    date={concert[0].dateTime}
+                    date={moment(concert[0].dateTime).format('DD MMM YYYY')}
+                    time={moment(concert[0].dateTime).format('HH:mm')}
                     stage={concert[0].stage}
                     age={concert[0].ageLimit}
                     name={concert[0].bandName}

@@ -4,12 +4,18 @@ import TopBanner from '../components/topbannercomponent.js';
 import ConcertCard from '../components/singleconcertcomponent.js';
 import styles from '../styles/Home.module.css';
 import axios from 'axios';
+import moment from 'moment';
 
 function Home({ concerts, error }) {
 
   if (error) {
     return <div>An error occured: {error.message}</div>;
   }
+
+  function formatDate(string){
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return new Date(string).toLocaleDateString([],options);
+}
 
   return (
     <div className={styles.container}>
@@ -29,9 +35,12 @@ function Home({ concerts, error }) {
             
 
             <ConcertCard
+
               key={concert.id} img={concert.bandImageUrl}
               name={concert.bandName} stage={concert.stage}
-              date={concert.dateTime} id={concert.id} />
+              date={moment(concert.dateTime).format('DD MMMM')} 
+              time={moment(concert.dateTime).format('HH:mm')} 
+              id={concert.id} />
           ))}
 
         </div>

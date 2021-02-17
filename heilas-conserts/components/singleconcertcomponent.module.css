@@ -2,9 +2,8 @@
 
 .cardtext {
     
-    
+    padding-left: 10px;
     background: #fff;
-    padding: 5px;
     cursor: pointer;
 }
 
