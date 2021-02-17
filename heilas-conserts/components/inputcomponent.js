@@ -6,30 +6,39 @@ import styles from './inputcomponent.module.css';
 
 const InputForm = () => {
 
-    const registerConcert = async (event) => {
+    const handleSubmit = async (event) => {
 
         event.preventDefault()
 
-        await axios.post('http://localhost:8080/concerts', {
-            'bandName': event.target.bandName.value,
-            'dateTime': event.target.date.value + 'T' + event.target.time.value,
-            'stage': event.target.stage.value,
-            'ageLimit': event.target.ageLimit.value,
-            'bandInfo': event.target.bandInfo.value,
-            'bandImageUrl': event.target.imageUrl.value,
-            'spotifyId': event.target.spotifyId.value
-        })
+        await axios
+            .post('http://localhost:8080/concerts', {
+                'bandName': event.target.bandName.value,
+                'dateTime': event.target.date.value + 'T' + event.target.time.value,
+                'stage': event.target.stage.value,
+                'ageLimit': event.target.ageLimit.value,
+                'bandInfo': event.target.bandInfo.value,
+                'bandImageUrl': event.target.imageUrl.value,
+                'spotifyId': event.target.spotifyId.value
+            })
             .then(function (response) {
                 {/* console.log(response) can be used to se response message from API */ }
             })
             .catch(function (err) {
                 console.log(err);
             });
+
+        event.target.bandName.value = "";
+        event.target.date.value = "";
+        event.target.time.value = "";
+        event.target.bandInfo.value = "";
+        event.target.imageUrl.value = "";
+        event.target.spotifyId.value = "";
+
     }
 
     return (
 
-        <Form onSubmit={registerConcert} className={styles.Form}>
+        <Form onSubmit={handleSubmit} className={styles.Form}>
             <Form.Group controlId="bandName">
                 <Form.Label>Band Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter Band Name" />
