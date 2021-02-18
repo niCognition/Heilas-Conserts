@@ -7,7 +7,7 @@ import InputForm from '../components/inputcomponent.js'
 import styles from '../styles/Home.module.css'
 
 
-export default function Login() {
+export default function RegisterConcert() {
     return (
         <div>
             <Head>

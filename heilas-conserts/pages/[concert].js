@@ -45,7 +45,7 @@ function Concert({ concerts, error }) {
                     src={`https://open.spotify.com/embed/artist/${concert[0].spotifyId}`}
                     width="100%"
                     height="380"
-                    frameborder="0"
+                    frameBorder="0"
                     allowtransparency="true"
                     allow="encrypted-media"></iframe>
             </Container>
