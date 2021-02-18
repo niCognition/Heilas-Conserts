@@ -13,10 +13,6 @@ function Home({ concerts, error }) {
     return <div>An error occured: {error.message}</div>;
   }
 
-  function formatDate(string) {
-    var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(string).toLocaleDateString([], options);
-  }
 
   return (
     <div className={styles.container}>
